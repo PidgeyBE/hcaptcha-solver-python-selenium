@@ -75,6 +75,7 @@ class hCaptcha:
             '--enable-webgl-draft-extensions')
         options.add_argument('--disable-infobars')  # Disable popup
         options.add_argument('--disable-popup-blocking')  # and info bars.
+        options.add_argument("--disable-blink-features=AutomationControlled")
         driver = webdriver.Chrome(service=SC(CDM(  # Start the webdriver.
             log_level=0).install()), options=options)
         driver.maximize_window()  # Maximize window to reach all elements.
